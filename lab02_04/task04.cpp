@@ -8,15 +8,15 @@ int main() {
 	
 	double varX;
 	int varN;
-	double varA = 1;
-	double sum = varA;
-
+	
 	while (true)
 	{	
 		cout << "Input x = ";
 		cin >> varX;
 		cout << "Input n = ";
 		cin >> varN;
+		double varA = 1;
+		double sum = varA;
 		int index = 0;
 		do
 		{
