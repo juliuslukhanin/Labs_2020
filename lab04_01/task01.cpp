@@ -10,49 +10,37 @@ int  countSumPositiveArrayElements(int* array, int size);
 void sortArrayDescending(int* array, int size);
 long countMultiplyElementsBetweenMinMaxAbs(int* array, int size);
 int main();
-void fillRandomAndPrintArray(const int& size, int  *array);
+void fillRandomAndPrintArray(const int& ARRAY_SIZE, int  array[15]);
 
 int main() {
 
-	int arraySize = {};
+	const int ARRAY_SIZE1 = 4;
+	const int ARRAY_SIZE2 = 5;
 
-	cout << "Input array size: ";
-	cin >> arraySize;
+	int array[ARRAY_SIZE1][ARRAY_SIZE2];
 
-	int *array = new int [arraySize];
-
-
-	fillRandomAndPrintArray(arraySize, array);
+	fillRandomAndPrintArray(ARRAY_SIZE, array);
 	// task 01 part 
 	cout << endl << "Task 01" << endl;
 	cout << "The sum of positive elements of array equals : " <<
-		countSumPositiveArrayElements(array, arraySize) << endl;
+		countSumPositiveArrayElements(array, ARRAY_SIZE) << endl;
 	// task 02 part 
 	cout << endl << "Task 02: " << endl;
-	long result2 = countMultiplyElementsBetweenMinMaxAbs(array, arraySize);
+	long result2 = countMultiplyElementsBetweenMinMaxAbs(array, ARRAY_SIZE);
 	cout << "Result is : " << result2 << endl;
 
 
-	// task 03 part
-	cout << endl << "Task 03: " << endl;
-	sortArrayDescending(array, arraySize);
-	cout << "Sorted array descendingly { ";
-	for (size_t i = 0; i < arraySize; i++)
-		cout << array[i] << " ";
-	cout << "}" << endl;
-
-	delete [] array;
 
 	system("pause");
 	return 0;
 }
 
-void fillRandomAndPrintArray(const int& size, int  *array)
+void fillRandomAndPrintArray(const int& size1, const int& size2, int  array[15])
 {
 	srand(static_cast<unsigned int>(time(0)));
 	cout << "Array filled: " << endl;
 	cout << "{ ";
-	for (size_t i = 0; i < size; i++)
+	for (size_t i = 0; i < ARRAY_SIZE; i++)
 	{
 		array[i] = (rand() - 16000) / 1000;
 		cout << array[i] << " ";

@@ -10,7 +10,7 @@ int  countSumPositiveArrayElements(int* array, int size);
 void sortArrayDescending(int* array, int size);
 long countMultiplyElementsBetweenMinMaxAbs(int* array, int size);
 int main();
-void fillRandomAndPrintArray(const int& ARRAY_SIZE, int  array[15]);
+void fillRandomAndPrintArray(const int& size, int  *array);
 
 int main() {
 	
@@ -40,12 +40,12 @@ int main() {
 	return 0;
 }
 
-void fillRandomAndPrintArray(const int& ARRAY_SIZE, int  array[15])
+void fillRandomAndPrintArray(const int& size, int  *array)
 {
 	srand(static_cast<unsigned int>(time(0)));
 	cout << "Array filled: " << endl;
 	cout << "{ ";
-	for (size_t i = 0; i < ARRAY_SIZE; i++)
+	for (size_t i = 0; i < size; i++)
 	{
 		array[i] = (rand() - 16000)/1000;
 		cout << array[i] << " ";
