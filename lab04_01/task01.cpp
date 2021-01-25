@@ -70,7 +70,6 @@ void sortArray(int* array, int size)
 				indexK++;
 			}
 	} while (indexK > 0);
-
 }
 
 
