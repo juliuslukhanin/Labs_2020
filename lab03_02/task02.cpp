@@ -9,7 +9,6 @@ using namespace std;
 int  countSumPositiveArrayElements(int* array, int size);
 void sortArrayDescending(int* array, int size);
 long countMultiplyElementsBetweenMinMaxAbs(int* array, int size);
-int main();
 void fillRandomAndPrintArray(const int& size, int  *array);
 
 int main() {
